@@ -93,24 +93,30 @@ contract RockPaperScissors is ERC20 {
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Rock && gameMatch.secondPlayerMove == PossibleMoves.Paper) {
             // Player 1 looses
+            winner(gameMatch.secondPlayer);
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Rock && gameMatch.secondPlayerMove == PossibleMoves.Scissor) {
             // Player 1 wins
+            winner(gameMatch.firstPlayer);
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Paper && gameMatch.secondPlayerMove == PossibleMoves.Rock) {
             // Player 1 wins
+            winner(gameMatch.firstPlayer);
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Paper && gameMatch.secondPlayerMove == PossibleMoves.Paper) {
             tie();
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Paper && gameMatch.secondPlayerMove == PossibleMoves.Scissor) {
             // Player 1 looses
+            winner(gameMatch.secondPlayer);
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Scissor && gameMatch.secondPlayerMove == PossibleMoves.Rock) {
             // Player 1 looses
+            winner(gameMatch.secondPlayer);
         }
         else if (gameMatch.firstPlayerMove == PossibleMoves.Scissor && gameMatch.secondPlayerMove == PossibleMoves.Paper) {
             // Player 1 looses
+            winner(gameMatch.firstPlayer);
         }
         else /* gameMatch.firstPlayerMove == PossibleMoves.Scissor && gameMatch.secondPlayerMove == PossibleMoves.Scissor)*/ {
             tie();
