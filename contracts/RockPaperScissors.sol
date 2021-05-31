@@ -46,7 +46,7 @@ contract RockPaperScissors is ERC20 {
         bid = _bid;
     }
 
-    function deposit(uint256 _amount) public {
+    function deposit(uint256 _amount) internal {
         // Amount must be greater than zero
         require(_amount == bid, "amount must be equal to bid");
 
